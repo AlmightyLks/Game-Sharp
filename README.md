@@ -1,5 +1,5 @@
-#Game-Sharp
-##A game engine built in CSharp
+# Game-Sharp
+## A game engine built in CSharp
 
 ## About Game-Sharp
 While, it is a game engine in CSharp, its very very VERY buggy, and the whole thing is kinda eh.  
