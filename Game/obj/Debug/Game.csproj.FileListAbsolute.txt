@@ -8,6 +8,4 @@ C:\Users\kadep\source\repos\Game\Game\obj\Debug\Game.csproj.GenerateResource.cac
 C:\Users\kadep\source\repos\Game\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
 C:\Users\kadep\source\repos\Game\Game\obj\Debug\Game.exe
 C:\Users\kadep\source\repos\Game\Game\obj\Debug\Game.pdb
-C:\Users\kadep\source\repos\Game\Game\bin\Debug\WinFormAnimation.dll
 C:\Users\kadep\source\repos\Game\Game\obj\Debug\Game.csprojAssemblyReference.cache
-C:\Users\kadep\source\repos\Game\Game\obj\Debug\Game.csproj.CopyComplete

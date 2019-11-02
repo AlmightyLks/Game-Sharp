@@ -64,13 +64,13 @@ namespace Game
                 while (yee)
                 {
                         if (Keyboard.IsKeyDown(Key.W))
-                            player1.MoveUp(8);
+                            player1.MoveUp(4);
                         if (Keyboard.IsKeyDown(Key.A))
-                            player1.MoveLeft(8);
+                            player1.MoveLeft(4);
                         if (Keyboard.IsKeyDown(Key.S))
-                            player1.MoveDown(8);
+                            player1.MoveDown(4);
                         if (Keyboard.IsKeyDown(Key.D))
-                            player1.MoveRight(8);
+                            player1.MoveRight(4);
                     try
                     {
                         Thread.Sleep(250);
