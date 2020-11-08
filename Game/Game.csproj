@@ -48,6 +48,8 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper\Helper.cs" />
+    <Compile Include="Model\Directions.cs" />
     <Compile Include="Platform.cs">
       <SubType>Form</SubType>
     </Compile>

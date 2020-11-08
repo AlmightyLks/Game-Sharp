@@ -41,6 +41,7 @@
             this.ExitButton.Name = "ExitButton";
             this.ExitButton.Size = new System.Drawing.Size(19, 20);
             this.ExitButton.TabIndex = 0;
+            this.ExitButton.TabStop = false;
             this.ExitButton.Text = "x";
             this.ExitButton.UseVisualStyleBackColor = true;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
@@ -52,6 +53,7 @@
             this.DragPanel.Name = "DragPanel";
             this.DragPanel.Size = new System.Drawing.Size(789, 20);
             this.DragPanel.TabIndex = 1;
+            this.DragPanel.TabStop = false;
             this.DragPanel.Text = "Kades Game Engine";
             this.DragPanel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.DragPanel.UseVisualStyleBackColor = true;
@@ -63,7 +65,6 @@
             this.GameArea.Name = "GameArea";
             this.GameArea.Size = new System.Drawing.Size(801, 435);
             this.GameArea.TabIndex = 2;
-            this.GameArea.Paint += new System.Windows.Forms.PaintEventHandler(this.GameArea_Paint);
             // 
             // PlayerObj
             // 
@@ -84,6 +85,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Platform";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Platform_Load);
             this.GameArea.ResumeLayout(false);
             this.ResumeLayout(false);
 

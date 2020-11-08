@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Game.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,7 +18,7 @@ namespace Game
     public partial class Platform : Form
     {
         /// <summary>
-        /// The thread listening to the player's keyboard input
+        /// The thread listening to the player's movement input
         /// </summary>
         private Thread movementThread;
 
@@ -55,11 +56,21 @@ namespace Game
         }
 
         /// <summary>
-        /// This event-method is fired when the GameArea is being painted
+        /// This event-method is fired when the user presses the ExitButton in the upper-right corner of the window
         /// </summary>
         /// <param name="sender">Sender object</param>
-        /// <param name="e">PaintEventArgs</param>
-        private void GameArea_Paint(object sender, PaintEventArgs e)
+        /// <param name="e">EventArgs</param>
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            movementThread.Interrupt();
+            Environment.Exit(0);
+        }
+        /// <summary>
+        /// This event-method is fired when the Platform is loaded
+        /// </summary>
+        /// <param name="sender">Sender object</param>
+        /// <param name="e">EventArgs</param>
+        private void Platform_Load(object sender, EventArgs e)
         {
             movementThread = new Thread(() =>
             {
@@ -67,13 +78,13 @@ namespace Game
                 do
                 {
                     if (Keyboard.IsKeyDown(Key.W))
-                        PlayerObj.MoveUp(4);
+                        PlayerObj.ChangePosition(Directions.Up, 4);
                     if (Keyboard.IsKeyDown(Key.A))
-                        PlayerObj.MoveLeft(4);
+                        PlayerObj.ChangePosition(Directions.Left, 4);
                     if (Keyboard.IsKeyDown(Key.S))
-                        PlayerObj.MoveDown(4);
+                        PlayerObj.ChangePosition(Directions.Down, 4);
                     if (Keyboard.IsKeyDown(Key.D))
-                        PlayerObj.MoveRight(4);
+                        PlayerObj.ChangePosition(Directions.Right, 4);
 
                     try
                     {
@@ -87,17 +98,6 @@ namespace Game
             });
             movementThread.SetApartmentState(ApartmentState.STA);
             movementThread.Start();
-        }
-
-        /// <summary>
-        /// This event-method is fired when the user presses the ExitButton in the upper-right corner of the window
-        /// </summary>
-        /// <param name="sender">Sender object</param>
-        /// <param name="e">EventArgs</param>
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            movementThread.Interrupt();
-            Environment.Exit(0);
         }
     }
 }
