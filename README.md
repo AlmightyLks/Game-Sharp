@@ -8,7 +8,7 @@ This was just made to test if it works, I might work on getting it better later.
 ## Main goal
 To create a player moving on the screen in a **__Winforms__** application.
 
-## Binarys
+## Binaries
 None, just build it with VS lol.
 
 ## Credits
